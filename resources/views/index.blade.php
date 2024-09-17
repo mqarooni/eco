@@ -107,34 +107,7 @@
         </div>
         <!-- hero area end -->
 
-        <!-- feature area start -->
-        @if($governanceStandards->isNotEmpty())
-        <div id="feature-one-page" class="tp-feature-area pt-130 pb-110 p-relative z-index grey-bg-2">
-            <div class="tp-feature-shape-2">
-                <img src="assets/img/feature/ab-bg.png" alt="">
-            </div>
-            <div class="container">
-                <h2 class="tp-feature-title text-center">{{ __('messages.Governance_standards') }}</h2>
-                <div class="row row-cols-xl-5 row-cols-lg-3 justify-content-center">
-                    @foreach ($governanceStandards as $standard)
-                    <div class="col col-sm-6 wow tpfadeUp" data-wow-duration=".9s" data-wow-delay=".3s">
-                        <div class="tp-feature-item mb-30 text-center">
-                            <div class="tp-feature-icon">
-                            <img src="{{ asset('uploads/' . $standard->image) }}" />
-                            </div>
-                            <div class="tp-feature-content">
-                                <h4 class="tp-feature-title-sm">
-                                    {{ app()->getLocale() == 'ar' ? $standard->name_ar : $standard->name_en }}
-                                </h4>
-                            </div>
-                        </div>
-                    </div>
-                    @endforeach
-                </div>
-            </div>
-        </div>
-        @endif
-        <!-- feature area end -->
+
 
         <!-- about area start -->
         <div id="about-one-page" class="tp-about-area fix pt-120">

@@ -18,7 +18,6 @@ Route::group([
     $router->resource('popupsandcookies', popupsandcookiesController::class);
     $router->resource('languages', LanguageController::class);
     $router->resource('custom-pages', CustomPageController::class);
-    $router->resource('governancestandards', GovernancestandardsController::class);
     $router->resource('festivals', FestivalsController::class);
 
 

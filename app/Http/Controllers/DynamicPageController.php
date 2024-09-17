@@ -8,7 +8,6 @@ use App\Models\Landing;
 use App\Models\Footer;
 use App\Models\Popupsandcookies;
 use App\Models\CustomPage;
-use App\Models\Governancestandards;
 
 
 class DynamicPageController extends Controller
@@ -21,10 +20,9 @@ class DynamicPageController extends Controller
         $popup = Popupsandcookies::latest()->first();
         $customPagesInHeader = CustomPage::where('show_in_header', true)->get();
         $customPagesInFooter = CustomPage::where('show_in_footer', true)->get();
-        $governanceStandards = Governancestandards::all();
 
 
-        return compact('branding', 'footer', 'cookie_settings', 'popup', 'customPagesInHeader', 'customPagesInFooter', 'governanceStandards');
+        return compact('branding', 'footer', 'cookie_settings', 'popup', 'customPagesInHeader', 'customPagesInFooter');
     }
 
     public function index(): View
