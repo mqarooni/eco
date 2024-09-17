@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DynamicPageController;
 use App\Http\Controllers\AboutController;
 use App\Admin\Controllers\CustomPageController;
-use App\Http\Controllers\ShopController;
 use App\Models\Branding;
 
 
@@ -27,10 +26,8 @@ Route::get('/custom-page/{slug}', [DynamicPageController::class, 'showCustomPage
 Route::get('/page/{page}', [DynamicPageController::class, 'showPage']);
 Route::post('/page/{page}/update', [DynamicPageController::class, 'updatePage']);
 // Shop details page with slug
-Route::get('/shop/{slug}', [ShopController::class, 'show'])->name('shop.details');
 
 
 
 //  website Pages
 Route::get('/about', [AboutController::class, 'index'])->name('about');
-Route::get('/shop', [ShopController::class, 'index'])->name('shop');
