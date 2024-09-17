@@ -4,10 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DynamicPageController;
 use App\Http\Controllers\AboutController;
 use App\Admin\Controllers\CustomPageController;
-use App\Http\Controllers\FestivalsController;
 use App\Http\Controllers\FestivalListController;
 use App\Models\Branding;
-use App\Models\Festivals;
 
 
 // Set the default route to the home page without language prefix
@@ -30,14 +28,7 @@ Route::get('/page/{page}', [DynamicPageController::class, 'showPage']);
 Route::post('/page/{page}/update', [DynamicPageController::class, 'updatePage']);
 
 
-// Route for displaying all festivals
-Route::get('/festivals', [FestivalsController::class, 'index'])->name('festivals.index');
-
-// Route for displaying individual festival details
-Route::get('/festivals/{slug}', [FestivalsController::class, 'show'])->name('festival.details');
-
 
 // Other website Pages
 Route::get('/about', [AboutController::class, 'index'])->name('about');
-Route::get('/festivals', [FestivalListController::class, 'index'])->name('festivals.list');
 
