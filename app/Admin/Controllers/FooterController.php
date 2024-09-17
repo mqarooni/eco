@@ -19,7 +19,7 @@ class FooterController extends AdminController
         $usefulLinks = [];
 
         foreach ($routes as $route) {
-            if (in_array($route->getName(), ['about', 'team', 'aboutCommittee'])) {
+            if (in_array($route->getName(), ['about', 'team'])) {
                 $usefulLinks[$route->getName()] = ucfirst($route->getName());
             }
         }

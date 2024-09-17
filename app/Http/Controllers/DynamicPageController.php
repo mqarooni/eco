@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\View\View;
 use App\Models\Branding;
 use App\Models\Landing;
-use App\Models\AboutCommittee;
 use App\Models\Footer;
 use App\Models\Popupsandcookies;
 use App\Models\CustomPage;
@@ -34,14 +33,6 @@ class DynamicPageController extends Controller
         $landing = Landing::latest()->first();
 
         return view('index', array_merge($sharedData, compact('landing')));
-    }
-
-    public function aboutCommittee(): View
-    {
-        $sharedData = $this->getSharedData();
-        $committees = AboutCommittee::all();
-
-        return view('about_committee', array_merge($sharedData, compact('committees')));
     }
 
      // Method to show custom pages based on slug
