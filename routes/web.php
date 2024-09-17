@@ -3,13 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DynamicPageController;
 use App\Http\Controllers\AboutController;
-use App\Http\Controllers\TeamController;
 use App\Http\Controllers\AboutCommitteeController;
 use App\Admin\Controllers\CustomPageController;
 use App\Http\Controllers\FestivalsController;
 use App\Http\Controllers\FestivalListController;
 use App\Models\Branding;
-use App\Models\Team;
 use App\Models\Festivals;
 use App\Http\Controllers\DevelopmentGoalsController;
 use App\Http\Controllers\MeetingsController;
@@ -34,9 +32,6 @@ Route::get('/custom-page/{slug}', [DynamicPageController::class, 'showCustomPage
 Route::get('/page/{page}', [DynamicPageController::class, 'showPage']);
 Route::post('/page/{page}/update', [DynamicPageController::class, 'updatePage']);
 
-//team-details page  
-Route::get('/team/{slug}', [TeamController::class, 'show'])->name('team.details');
-
 
 // Route for displaying all festivals
 Route::get('/festivals', [FestivalsController::class, 'index'])->name('festivals.index');
@@ -47,7 +42,6 @@ Route::get('/festivals/{slug}', [FestivalsController::class, 'show'])->name('fes
 
 // Other website Pages
 Route::get('/about', [AboutController::class, 'index'])->name('about');
-Route::get('/team', [TeamController::class, 'index'])->name('team');
 Route::get('/aboutCommittee', [AboutCommitteeController::class, 'index'])->name('aboutCommittee');
 Route::get('/development-goals', [DevelopmentGoalsController::class, 'index'])->name('development-goals');
 Route::get('/meetings', [MeetingsController::class, 'index'])->name('meetings');
