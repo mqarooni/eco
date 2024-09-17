@@ -1,0 +1,303 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.3 activitics css start
+/*----------------------------------------*/
+
+.tp-activitics{
+    &-left-box{
+        @media #{$md,$xs}{
+            margin-bottom: 70px;  
+        }
+    }
+    &-mail-box{
+        background-color: var(--tp-theme-2);
+        padding: 92px 50px;
+        margin-bottom: 40px;
+        @media #{$xs}{
+            padding: 60px 30px;
+        }
+        & i{
+            font-size: 72px;
+            color: var(--tp-common-white);
+            margin-bottom: 30px;
+            display: inline-block;
+        }
+        & span{
+            font-size: 16px;
+            font-weight: 400;
+            color: #e5e3e3;
+        }
+    }
+    &-form-box{
+        @media #{$lg}{
+            margin-bottom: 70px;
+        }
+    }
+    &-title-sm{
+        font-size: 24px;
+        font-weight: 700;
+        color: var(--tp-common-white);
+        font-family: var(--tp-ff-dmsans);
+        line-height: 1.2;
+        margin-bottom: 30px;
+        @media #{$xs}{
+            & br{
+                display: none;
+            }
+        }
+    }
+    &-input{
+        position: relative;
+        margin-bottom: 30px;
+        & input{
+            font-size: 16px;
+            font-weight: 400;
+            color: #767676;
+            border: 0;
+            border-bottom: 1px solid var(--tp-border-2);
+            padding-left: 30px;
+            @include placeholder{
+                color: #767676;
+                font-size: 16px;
+                font-weight: 400;
+            }
+            &:focus{
+                border-color: var(--tp-theme-2);
+            }
+        }
+        & i{
+            position: absolute;
+            top: 17px;
+            left: 0;
+            font-size: 16px;
+            color: #767676;
+        }
+    }
+    &-btn{
+        & .tp-btn-subscribe{
+            margin-bottom: 5px;
+        }
+    }
+    &-text{
+        margin-bottom: 100px;
+        @media #{$md}{
+            margin-bottom: 40px;
+        }
+        @media #{$xs}{
+            margin-bottom: 50px;
+        }
+        & span{
+            font-size: 16px;
+            font-weight: 400;
+            color: #767676;
+        }
+    }
+    &-link{
+        & a{
+            & span{
+                font-size: 14px;
+                font-weight: 700;
+                text-transform: uppercase;
+                margin-left: 26px;
+                color: var(--tp-theme-2);
+                border-bottom: 1px solid var(--tp-theme-2);
+            }
+            & i{
+                font-size: 18px;
+                color: var(--tp-theme-2);
+                transform: translateY(3px);
+                display: inline-block;
+                position: relative;
+                &::after{
+                    position: absolute;
+                    top: -1px;
+                    right: -8px;
+                    height: 22px;
+                    width: 22px;
+                    background-color: #f7f7f9;
+                    content: '';
+                    border-radius: 50%;
+                    z-index: -1;
+                }
+            }
+        }
+    }
+    &-right{
+        &-title-box{
+            & .tp-section-title{
+                & span{
+                    position: absolute;
+                    top: 10px;
+                    right: 35%;
+                    @media #{$lg}{
+                        top: -3px;
+                        right: 58%;
+                    }
+                }
+            }
+        }
+    }
+    &-right-wrap{
+        @media #{$lg,$md,$xs}{
+            padding-left: 0;
+        }
+    }
+    &-council{
+        &-subtitle{
+            font-size: 12px;
+            font-weight: 700;
+            color: var(--tp-theme-1);
+            text-transform: uppercase;
+            margin-bottom: 8px;
+            display: inline-block;
+        }
+        &-title{
+            font-size: 25px;
+            font-weight: 700;
+            line-height: 1;
+            margin-bottom: 20px;
+            color: var(--tp-theme-2);
+            font-family: var(--tp-ff-dmsans);
+            @media #{$xl}{
+                font-size: 24px;
+            }
+        }
+        &-item{
+            border: 1px solid rgb(244, 244, 244);
+            transition: .3s;
+            &:hover{
+                box-shadow: 0px 3px 40px 0px rgba(17, 10, 54, 0.1);  
+                & .tp-activitics-council-btn{
+                    & a{
+                        background-color: var(--tp-theme-2);
+                        border-color: var(--tp-theme-2);
+                        color: var(--tp-common-white);
+                        & i{
+                            transform: rotate(0deg);
+                        }
+                    }
+                }               
+            }
+        }
+        &-date{
+            list-style: 0;
+            position: absolute;
+            top: 38%;
+            left: -5px;
+            transform: rotate(-90deg);
+            @media #{$xs}{
+                position: static;
+                left: 0;
+                transform: rotate(0deg);
+                margin-bottom: 10px;
+            }
+            & span{
+                font-weight: 700;
+                font-size: 18px;
+                color: var(--tp-common-black);
+                display: inline-block;
+                padding: 0 15px;
+                height: 50px;
+                line-height: 50px;
+                margin: 0px -2px;
+                &.text-1{
+                    color: var(--tp-common-white);
+                    background-color: var(--tp-theme-1);
+                }
+                &.text-2{
+                    color: var(--tp-common-white);
+                    background-color: var(--tp-theme-2);
+                }
+            }
+        }
+        &-btn{
+            position: absolute;
+            top: 50%;
+            right: -58px;
+            transform: translateY(-50%) rotate(-90deg);
+            @media #{$xs}{
+                position: static;
+                left: 0;
+                transform: rotate(0deg);
+            }
+            & a{
+                font-size: 14px;
+                color: var(--tp-theme-2);
+                text-transform: uppercase;
+                font-weight: 700;
+                height: 55px;
+                line-height: 55px;
+                padding: 0px 30px;
+                display: inline-block;
+                background-color: #f7f7f9;
+                transition: .3s;
+                & i{
+                    margin-left: 12px;
+                    display: inline-block;
+                    transform: translateY(2px) rotate(45deg);
+                    transition: .3s;
+                }
+            }
+        }
+    }
+    &-content-wrap{
+        padding:49px 100px;
+        @media #{$xs}{
+            padding: 40px 20px;
+        }
+    }
+    &-shape-img{
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        @media #{$xxl}{
+            width: 26%;
+         }
+        & img{
+            height: 520px;
+            width: 575px;
+        }
+        &::after{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba($color: #e67850, $alpha: .9);
+            content: '';
+
+              
+        }
+    }
+    &-meta{
+        @media #{$xs}{
+            margin-bottom: 20px;
+        }
+        & a{
+            margin-right: 30px;
+            @media #{$xs}{
+                display: block;
+                margin-right: 0;
+            }
+            & i{
+                font-size: 14px;
+                color: var(--tp-theme-1);
+                transform: translateY(2px);
+                display: inline-block;
+                margin-right: 11px;
+            }
+            & span{
+                font-size: 14px;
+                font-weight: 400;
+                color: #767676;
+                transition: .3s;
+                &:hover{
+                    color: var(--tp-theme-2);
+                }
+            }
+        }
+    }
+}
+  

@@ -1,0 +1,119 @@
+body {
+    text-align: right;
+}
+.float-left {
+    float: right !important;
+}
+
+.float-right {
+    float: left !important;
+}
+
+.text-left {
+    text-align: right !important;
+}
+
+.text-right {
+    text-align: left !important;
+}
+.ml-auto {
+    margin-right: auto !important;
+    margin-left: 0 !important;
+}
+
+.mr-auto {
+    margin-left: auto !important;
+    margin-right: 0 !important;
+}
+
+.tp-slider-title-box p {
+    text-align: right !important;
+}
+
+.tp-slider-title-box p {
+    left: auto; 
+    right: 0;
+}
+/* sustainable development goals area */
+
+html[dir="rtl"] .sustainable-goal-item {
+    text-align: right;
+}
+
+html[dir="rtl"] .sustainable-goal-item .icon img {
+    float: right;
+    margin-left: 15px;
+    margin-right: 0;
+}
+
+html[dir="rtl"] .sustainable-goal-item .title h2,
+html[dir="rtl"] .sustainable-goal-item .description p {
+    text-align: right;
+}
+
+html[dir="rtl"] .sustainable-goal-item:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+/* sustainable development goals area */
+
+
+/*----------------------------------------*/
+/* blog details css start
+/*----------------------------------------*/
+html[dir="rtl"] .postbox__list-content ul li {
+    padding-right: 40px; 
+    padding-left: 0;
+}
+  
+html[dir="rtl"] .postbox__list-content ul li span {
+    left: auto;
+    right: 0;
+}
+  
+.rc__post-content {
+  margin-right: 15px;
+}
+
+html[dir="rtl"] .rc__post-content {
+  margin-left: 1px; 
+}
+html[dir="rtl"] .postbox__meta span {
+    margin-left: 25px; 
+    margin-right: 0; 
+}
+  
+html[dir="rtl"] .postbox__meta span:not(:last-of-type)::before {
+    right: auto; 
+    left: -20px; 
+}
+  
+html[dir="rtl"] .postbox__meta span i {
+    margin-left: 7px; 
+    margin-right: 0; 
+}
+/*----------------------------------------*/
+/* blog details css end
+/*----------------------------------------*/
+
+/* festivals Page */
+html[dir="rtl"] .evn-list-box ul li {
+    text-align: right;
+    padding-right: 80px;
+    margin-top: 50px;
+    position: relative;
+}
+
+html[dir="rtl"] .evn-list-box ul li span {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateY(0);
+}
+
+html[dir="rtl"] .evn-list-box ul li span i {
+    margin-right: 5px;
+}
+
+html[dir="rtl"] .evn-user-icon span {
+    margin-left: 25px;
+}

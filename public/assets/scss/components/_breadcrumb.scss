@@ -1,0 +1,60 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.11 Breadcrumb
+/*----------------------------------------*/
+
+.breadcrumb{
+    &__height{
+        padding-top: 160px;
+        padding-bottom: 175px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        object-fit: cover;
+    }
+    &__overlay{
+        position: relative;
+        &::after{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            content: '';
+            background-color: rgb(37, 45, 76);
+            mix-blend-mode: difference;
+        }
+    }
+    &__title{
+        font-weight: 700;
+        font-size: 90px;
+        text-transform: capitalize;
+        color: var(--tp-common-white); 
+        margin-bottom: 10px;  
+        @media #{$xs}{
+            font-size: 50px;
+        }     
+    }
+    &__list{
+        display: inline-block;
+        padding: 0px 10px;
+        & span{
+            font-weight: 700;
+            font-size: 15px;
+            line-height: 19px;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;   
+            color: var(--tp-common-white);       
+            &.dvdr{
+                & i{
+                    font-size: 15px;
+                    padding: 0px 5px;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+  
+
+

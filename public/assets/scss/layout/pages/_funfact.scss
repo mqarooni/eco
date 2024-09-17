@@ -1,0 +1,106 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.13 funfact css start
+/*----------------------------------------*/
+.tp-funfact{
+    &-icon{
+        & span{
+            font-size: 63px;
+            margin-bottom: 25px;
+            display: inline-block;
+            color: var(--tp-theme-1);
+        }
+    }
+    &-content{
+        & h4{
+            font-size: 50px;
+            font-weight: 700;
+            color: var(--tp-theme-2);
+            & i{
+                font-style: normal;
+            }
+        }
+        & span{
+            font-size: 16px;
+            font-weight: 700;
+            color: #90a1a1;
+        }
+    }
+}
+
+.tp-funfact-2{
+    &-icon{
+        margin-bottom: 55px;
+        & span{
+            font-size: 62px;
+            color: var(--tp-theme-1);
+            display: inline-block;
+            transition: .3s;
+            & i{
+                line-height: 0;
+            }
+            &::after{
+                position: absolute;
+                top: -11px;
+                left: 50%;
+                height: 130px;
+                width: 130px;
+                content: '';
+                z-index: -1;
+                background-color: var(--tp-theme-2);
+                transform: translate(-50%,-50%);
+                border-radius: 50%;
+                transition: .3s;
+            }
+        }
+    }
+    &-item{
+        background-color: #0b2d29;
+        padding: 75px 30px 40px 30px;
+        &:hover{
+            .tp-funfact-2-icon{
+                & span{
+                    color: var(--tp-common-white);
+                    &::after{
+                        top: 40%;
+                        background-color: var(--tp-theme-1);
+                    }
+                }
+            }
+        }
+    }
+    &-bg{
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    &-content{
+        & h4{
+            font-size: 50px;
+            color: var(--tp-common-white);
+            font-weight: 600;
+            margin-bottom: 5px;
+            @media #{$lg}{
+                font-size: 40px;
+            }
+            @media #{$md,$xs}{
+                font-size: 32px;
+            }
+        }
+        & em{
+            font-style: normal;
+        }
+        & span{
+            font-size: 16px;
+            font-weight: 700;
+            color: #a9b5b5;
+            @media #{$lg}{
+                font-size: 14px;
+            }
+            @media #{$md,$xs}{
+                font-size: 14px;
+            }
+        }
+    }
+}

@@ -1,0 +1,75 @@
+@use '../utils' as *;
+
+/*----------------------------------------*/
+/*  2.15 Section Title
+/*----------------------------------------*/
+
+.tp-section{
+    &-subtitle{
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--tp-theme-1);
+        text-transform: uppercase;
+        margin-bottom: 15px;
+        display: inline-block;
+        &::before{
+            height: 6px;
+            width: 6px;
+            background-color: var(--tp-theme-2);
+            content: '';
+            display: inline-block;
+            margin-right: 10px;
+            transform: translateY(-2px);
+        }
+        &.theme-color-2{
+            color: var(--tp-theme-1);
+            &::before{
+                background-color: var(--tp-common-white);
+            }
+        }
+    }
+    &-subtitle-2{
+        font-size: 14px;
+        font-weight: 700;
+        color: var(--tp-theme-1);
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        display: inline-block;
+        & i{
+            color: var(--tp-theme-2);
+            font-size: 19px;
+            font-weight: 700;
+            transform: translateY(3px);
+            display: inline-block;
+            margin-right: 8px;
+        }
+    }
+}
+.tp-section{
+    &-title{
+        font-size: 48px;
+        color: var(--tp-theme-2);
+        font-weight: 400;
+        @media #{$lg}{
+            font-size: 38px;
+        }
+        @media #{$md}{
+            font-size: 38px;
+            & br {
+                display: none;
+            }
+        }
+        @media #{$xs}{
+            font-size: 31px;
+            & br {
+                display: none;
+            }
+        }
+    }
+}
+.tp-inner-title{
+    font-size: 36px;
+    color: var(--tp-theme-2);
+    font-weight: 700;
+    padding-bottom: 5px;
+}

@@ -1,0 +1,68 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.7 city-info css start
+/*----------------------------------------*/
+
+.tp-history{
+    &-title{
+        font-size: 48px;
+        font-weight: 400;
+        color: var(--tp-theme-2);
+        padding-bottom: 20px;
+        @media #{$xs}{
+            font-size: 35px;
+        }
+    }
+    &-thumb{
+        & img{
+            width: 100%;
+            @media #{$md,$xs}{
+                margin-bottom: 40px;
+            }
+        }
+    }
+    &-content{
+        &.space{
+            &-1{
+                padding-left: 70px;
+                @media #{$lg,$md,$xs}{
+                    padding-left: 0;
+                }
+            }
+            &-2{
+                padding-right: 70px;
+                @media #{$lg,$md,$xs}{
+                    padding-right: 0;
+                }
+            }
+        }
+        & p{
+            margin-bottom: 40px;
+        }
+        & span{
+            font-size: 180px;
+            color: transparent;
+            font-weight: 700;
+            line-height: 1;
+            display: inline-block;
+            transform: translateX(-170px);
+            -webkit-text-stroke: 1px var(--tp-theme-2);
+            @media #{$md}{
+                transform: translateX(0px);
+            }
+            @media #{$xs}{
+                font-size: 120px;
+                transform: translateX(0px);
+            }
+            &.solid-text{
+                @media #{$md,$xs}{
+                    transform: translateX(0px);
+                }
+                color: var(--tp-theme-1);
+                transform: translateX(170px);
+                -webkit-text-stroke: 1px transparent;
+            }
+        }
+    }
+}

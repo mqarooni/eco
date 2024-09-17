@@ -1,0 +1,123 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.11 faq css start
+/*----------------------------------------*/
+
+.tp-faq{
+    &-title-box{
+        background-color: #f7f7f9;
+        padding: 60px 60px 100px 60px;
+        @media #{$xs}{
+            padding: 60px 20px 100px 30px;
+        }
+    }
+    &-img{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+    }
+    &-input-box{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        max-width: 68%;
+        @media #{$xs}{
+            max-width: 100%;
+        }
+        & input{
+            border-color: transparent; 
+            padding-right: 60px; 
+            background-color: rgb(255, 255, 255);
+            box-shadow: 0px 4px 40px 0px rgba(22, 23, 26, 0.08);
+            @include placeholder{
+                color: #767676;
+                font-size: 16px;
+            }
+            &:focus{
+                border-color: transparent;
+            }           
+        }
+        & span{
+            position: absolute;
+            right: 30px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--tp-theme-2);
+            font-size: 16px;
+        }
+    }
+    &-sidebar{
+        &-item{
+            & img{
+                width: 100%;
+            }
+        }
+        &-bg{
+            position: relative;
+            background-size: cover;
+            &::after{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                content: '';
+                background-color: rgba(14, 54, 49, 0.9);            
+            }
+        }
+        &-content-box{
+            padding: 70px 60px;
+            @media #{$lg}{
+                padding: 40px 30px;              
+            }
+            @media #{$md}{ 
+                margin-bottom: 40px;
+            }
+            @media #{$xs}{ 
+                padding: 45px 40px;
+                margin-bottom: 40px;
+            }
+        }
+        &-content{
+            & span{
+                height: 60px;
+                width: 60px;
+                line-height: 60px;
+                font-size: 25px;
+                border-radius: 50%;
+                text-align: center;
+                display: inline-block;
+                color: var(--tp-common-white);
+                background-color: var(--tp-theme-1);
+                margin-bottom: 30px;
+                & i{
+                    transform: rotate(-40deg);
+                }
+            }
+        }
+        &-info{
+            & span{
+                display: block;
+                font-size: 16px;
+                font-weight: 700;
+                color: var(--tp-common-white);
+            }
+        }
+        &-title{
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--tp-common-white);
+            font-family: var(--tp-ff-dmsans);
+            margin-bottom: 30px;
+        }
+    }
+    &-right-box{
+        padding-left: 70px;
+        @media #{$lg,$md,$xs}{
+            padding-left: 0;
+        }
+    }
+}

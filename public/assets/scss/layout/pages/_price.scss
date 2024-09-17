@@ -1,0 +1,93 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.17 price css start
+/*----------------------------------------*/
+
+.tp-price{
+    &-content-wrap{
+        background-color: #f5f5f5;
+        padding: 50px 50px 180px 50px;
+    }
+    &-info{
+        margin-bottom: 40px;
+        & h4{
+            font-size: 50px;
+            margin-bottom: 7px;
+            color: var(--tp-theme-2);
+        }
+        & span{
+            font-size: 18px;
+            color: #0e3631;
+        }
+    }
+    &-item{
+        &.active{
+            & .tp-price-content-wrap{
+                background-color: var(--tp-theme-2);
+            }
+            & .tp-price-icon span {
+                color: var(--tp-common-white);
+            }
+            & .tp-price-tag span {
+                color: #a9b5b5;
+            }
+            & .tp-price-info h4 {
+                color: var(--tp-common-white);
+            }
+            & .tp-btn-grey {
+                color: var(--tp-common-white);
+                border-color: var(--tp-theme-1);
+                background-color: var(--tp-theme-1);
+            }
+            & .tp-price-info span {
+                color: var(--tp-common-white);
+            }
+        }
+    }
+    &-list{
+        padding: 40px;   
+        margin: 0px 20px; 
+        margin-top: -140px;    
+        background-color: var(--tp-common-white);
+        box-shadow: 0px 4px 60px 0px rgba(21, 24, 32, 0.08);
+        @media #{$md,$xs}{
+            padding: 25px;
+        }
+        & ul{
+            & li{
+                position: relative;
+                list-style-type: none;
+                padding-left: 30px;
+                font-size: 16px;
+                color: #767676;
+                margin-bottom: 5px;
+                @media #{$xs}{
+                    font-size: 14px;
+                }
+                &:last-child{
+                    margin-bottom: 0;
+                }
+                & i{
+                    position: absolute;
+                    top: 3px;
+                    left: 0;
+                    color: var(--tp-theme-1);
+                }
+            }
+        }
+    }
+    &-tag{
+        & span{
+            margin-bottom: 15px;
+            display: inline-block;
+            font-size: 16px;
+        }
+    }
+    &-icon{
+        & span{
+            font-size: 60px;
+            color: var(--tp-theme-2);
+        }
+    }
+}

@@ -1,0 +1,41 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.4 brand css start
+/*----------------------------------------*/
+
+.tp-brand{
+    &-title-box{
+        position: relative;
+        &::after{
+            position: absolute;
+            top: 39px;
+            left: 0;
+            height: 1px;
+            width: 100%;
+            background-color: var(--tp-border-2);
+            content: '';
+            z-index: -1;
+        }
+        & i{
+            display: block;
+            font-size: 18px;
+            color: var(--tp-common-black);
+        }
+        & .tp-section-subtitle-2{
+            background-color: var(--tp-common-white);
+            padding: 0px 30px;
+        }
+    }
+    &-item{
+        & img{
+            opacity: .26;
+            transition: .3s;
+        }
+        &:hover{
+            & img{
+                opacity: 1;
+            }
+        }
+    }
+}

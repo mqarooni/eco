@@ -1,0 +1,215 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.14 hero css start
+/*----------------------------------------*/
+
+.tp-hero{
+    &-title{
+        font-size: 90px;
+        line-height: 1;
+        font-weight: 700;
+        color: var(--tp-theme-2);
+        @media #{$xxl,$xl}{
+            font-size: 85px;
+        }
+        @media #{$lg}{
+            font-size: 69px;
+        }
+        @media #{$md}{
+            font-size: 47px;
+        }
+        @media #{$xs}{
+            font-size: 40px;
+        }
+        @media #{$sm}{
+            font-size: 58px;
+        }
+    }
+    &-title-box{
+        @media #{$md,$xs}{
+            margin-bottom: 20px;
+        } 
+    }
+    &-content-wrap{
+        @media #{$xs}{
+            margin-top: 30px;
+        }
+        & .tp-slider-video-box{
+            @media #{$md,$xs}{
+                flex-wrap: wrap;
+            }
+        }
+        & .tp-slider-video{
+            @media #{$md,$xs}{
+                margin-bottom: 20px;
+            }
+            & a{
+                background-color: var(--tp-theme-2);
+                color: var(--tp-common-white);
+                animation: tp-pulse-2 2s infinite;
+            }
+            & span{
+                color: #767676;
+            }
+        }
+    }
+    &-thumb{
+        & img{
+            max-width: inherit;
+            margin-right: -50px;
+            @media #{$xl,$lg,$md,$xs}{
+                max-width: 100%;
+                margin-right: 0;
+            }
+        }
+    }
+    &-shape-1{
+        position: absolute;
+        bottom: -25%;
+        right: 25%;
+        animation: tpswing 1s forwards infinite alternate;
+        transform-origin: bottom right;
+        @media #{$xs}{
+            position: absolute;
+            bottom: 28%;
+            right: 7%;
+        }
+    }
+    &-base{
+        padding: 10px 30px;
+        position: absolute;
+        top: 40%;
+        right: -52%;
+        background-color: var(--tp-theme-2);
+        animation: tptranslateY2 2s forwards infinite alternate;
+        @media #{$xxxl}{
+           right: -33%;
+        }
+        @media #{$xxl}{
+           right: -12%;
+        }
+        @media #{$xl,$lg}{
+            right: 0;
+        }
+        & .tp-hero-climet{
+            &:first-child{
+                padding-right: 35px;
+                margin-right: 35px;
+                position: relative;
+                &::after{
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                    height: 55px;
+                    width: 1px;
+                    background-color: #274a46;
+                    content: '';
+                }
+            }
+        }
+    }
+    &-climet{
+        &-icon{
+            line-height: 0;
+            margin-right: 10px;
+            & i{
+                font-size: 23px;
+                color: var(--tp-common-white);
+            }
+        }
+        &-content{
+            & span{
+                font-size: 14px;
+                font-weight: 400;
+                color: var(--tp-common-white);
+                display: block;
+            }
+            & i{
+                font-size: 16px;
+                font-weight: 700;
+                color: var(--tp-common-white);
+                font-style: normal;
+            }
+        }
+    }
+    &-tel{
+        &-box{
+            padding: 11px 40px;
+            position: absolute;
+            bottom: 7%;
+            left: 10%;
+            background-color: var(--tp-common-white);
+            animation: tptranslateX2 2s forwards infinite alternate;
+        }
+        &-icon{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: -25px;
+            & i{
+                height: 50px;
+                width: 50px;
+                line-height: 58px;
+                text-align: center;
+                border-radius: 50%;
+                font-size: 22px;
+                display: inline-block;
+                background-color: var(--tp-theme-1);
+                color: var(--tp-common-white);
+            }
+        }
+        &-content{
+            & span{
+                font-size: 16px;
+                color: #9898a0;
+                font-weight: 400;
+                display: block;
+            }
+            & a{
+                font-size: 16px;
+                font-weight: 700;
+                color: var(--tp-theme-2);
+            }
+        }
+    }
+}
+
+.tp-hero-slider{
+    &-text{
+        white-space: nowrap;
+        animation: scrollText-2 50s infinite linear;
+        & h2{
+            font-size: 520px;
+            color: #fefefe;
+            line-height: .8;
+            font-weight: 700;
+            font-family: var(--tp-ff-dmsans);
+            @media #{$xxl,$xl}{
+                font-size: 370px;
+            }
+            @media #{$lg,$md}{
+                font-size: 300px;
+            }
+        }
+    }
+    &-text-wrap{
+        transform: rotate(-30deg);
+    }
+    &-text-main{
+        position: absolute;
+        top: -29%;
+        left: 0;
+        right: 0;
+        text-align: center;
+        @media #{$xxl,$xl}{
+            top: -11%;
+        }
+        @media #{$lg,$md}{
+            top: -5%;
+        }
+    }
+}
+
+

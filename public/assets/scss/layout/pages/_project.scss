@@ -1,0 +1,413 @@
+@use '../../utils' as *;
+
+/*----------------------------------------*/
+/*  7.18 project css start
+/*----------------------------------------*/
+
+.tp-project{
+    &-slider-active{
+        margin: 0px -15px;
+        @media #{$md,$xs}{
+            margin: 0;
+        }
+    }
+    &-right-text{
+        & p{
+            padding-left: 50px;
+            @media #{$md,$xs}{
+                padding-left: 0;
+                padding-top: 30px;
+            }
+        }
+    }
+    &-thumb {
+        & img {
+            width: 100%;
+            transition: .9s;
+        }
+    }
+    &-content-wrap{
+        padding: 35px;
+        position: absolute;
+        bottom: -50px;
+        left: 0;
+        right: 0;
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s;
+        background-color: var(--tp-common-white);
+    }
+    &-item{
+        &:hover{
+            & .tp-project-content-wrap{
+                opacity: 1;
+                visibility: visible;
+                bottom: 0;
+            }
+            & .tp-project-thumb{
+                & img{
+                    transform: scale(1.1) rotate(-2deg);
+                }
+               }
+        }
+    }
+    &-content{
+        & span{
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 7px;
+            display: inline-block;
+            text-transform: uppercase;
+            color: var(--tp-theme-1);
+        }
+    }
+    &-title-sm{
+        font-size: 26px;
+        line-height: 1;
+        margin-bottom: 0;
+        color: var(--tp-theme-2);
+        font-family: var(--tp-ff-dmsans);
+        &:hover{
+            color: var(--tp-theme-1);
+        }
+        @media #{$lg,$md,$xs}{
+            font-size: 22px;
+        }
+    }
+    &-icon{
+        & a{
+            height: 55px;
+            width: 55px;
+            line-height: 55px;
+            font-size: 20px;
+            transition: .3s;
+            text-align: center;
+            display: inline-block;
+            color: var(--tp-common-white);
+            background-color: var(--tp-theme-1);
+            &:hover{
+                background-color: var(--tp-theme-2);
+            }
+        }
+    }
+}
+.tp-project-2{
+    &-title-box{
+        & p{
+            padding-right: 100px;
+            margin-bottom: 0;
+            @media #{$lg}{
+                padding-right: 60px;
+            }
+            @media #{$xs}{
+                padding-right: 0px;
+            }
+        }
+    }
+    &-plr{
+        padding-left: 165px;
+        padding-right: 165px;
+        @media #{$xxl}{
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+        @media #{$xl}{
+            padding-left: 0;
+            padding-right: 0;
+        }
+        @media #{$lg,$md,$xs}{
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+    &-right{
+        &-bg{
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 875px;
+            height: 740px;
+            background-color: var(--tp-theme-1);
+            z-index: -1;
+            @media #{$xl}{
+                width: 520px;
+                height: 620px;
+            }
+        }
+        &-wrap{
+            margin-left: 100px;
+            @media #{$md,$xs}{
+                margin-left: 0;
+                margin-bottom: 40px;
+            }
+        }
+        &-top{
+            margin-bottom: 50px;
+            @media #{$lg}{
+                margin-bottom: 30px;
+            }
+            @media #{$md}{
+                margin-bottom: 20px;
+            }
+            & i{
+                font-size: 80px;
+                color: var(--tp-theme-2);
+                margin-right: 30px;
+            }
+            & span{
+                font-size: 22px;
+                font-weight: 700;
+                color: var(--tp-common-black);
+                line-height: 1.2;
+                @media #{$xs}{
+                    font-size: 19px;
+                }
+            }
+        }
+        &-bottom{
+            & h4{
+                font-size: 32px;
+                font-weight: 400;
+                color: var(--tp-common-black);
+                @media #{$lg,$md}{
+                    font-size: 28px;
+                    & br{
+                        display: none;
+                    }
+                }
+                @media #{$xs}{
+                    font-size: 22px;
+                    & br{
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+    &-item{
+        &:hover{
+            & img{
+                transform: scale(1.2);
+            }
+            & .tp-project-2-content{
+                opacity: 1;
+                visibility: visible;
+                transform: translate(-50%,-50%) scale(1);
+            }
+        }
+        & img{
+            transition: .9s;
+            width: 100%;
+        }
+    }
+    &-content{
+        height: 290px;
+        width: 290px;
+        background-color: var(--tp-theme-1);
+        border-radius: 50%;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%) scale(.3);
+        opacity: 0;
+        visibility: hidden;
+        transition: .5s;
+        @media #{$xxxl}{
+           height: 250px;
+           width: 250px;
+        }
+        @media #{$xxl,$xl}{
+            height: 200px;
+            width: 200px;  
+        }
+        & i{
+            font-size: 18px;
+            color: var(--tp-common-white);
+            display: block;
+            padding-bottom: 5px;
+        }
+        & span{
+            font-weight: 700;
+            color: var(--tp-common-white);
+            font-size: 14px;
+            text-transform: uppercase;
+            padding-bottom: 5px;
+            @media #{$xxl,$xl}{
+                font-size: 12px;          
+            }
+        }
+    }
+    &-title-sm{
+        font-size: 26px;
+        font-weight: 700;
+        line-height: 1;
+        color: var(--tp-common-white);
+        font-family: var(--tp-ff-dmsans);
+        & a{
+            background-repeat: no-repeat;
+            background-size: 0% 2px, 0 2px;
+            background-position: 100% 100%, 0 100%;
+            transition: background-size 0.4s linear;
+            background-image: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff);
+        }
+        &:hover{
+            & a{
+                background-size: 0% 2px, 100% 2px;
+            }
+        }
+        @media #{$xxl,$xl}{
+            font-size: 20px;
+        }
+    }
+}
+
+.tp-project-3{
+    &-mlr{
+        margin: 0px 160px;
+        @media #{$xl,$lg,$md,$xs}{
+            margin: 0;
+        }
+    }
+    &-content-wrap{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 0;
+        right: 0;
+        text-align: center;
+        padding: 20px;
+        opacity: 0;
+        visibility: hidden;
+        transition: .3s;
+    }
+    &-img{
+        height: 100%;
+        & img{
+            width: 100%;
+            height: 100%;
+            transition: .9s;
+        }
+    }
+    &-link{
+        & a{
+            height: 55px;
+            width: 55px;
+            display: inline-block;
+            border-radius: 50%;
+            line-height: 65px;
+            font-size: 20px;
+            font-weight: 700;
+            text-align: center;
+            color: var(--tp-common-white);
+            background-color: var(--tp-theme-2);
+            margin-bottom: 20px;
+        }
+    }
+    &-content{
+        & span{
+            font-size: 700;
+            font-size: 14px;
+            color: var(--tp-common-white);
+            line-height: 1;
+            margin-bottom: 10px;
+            display: inline-block;
+        }
+    }
+    &-title-sm{
+        font-size: 26px;
+        font-weight: 700;
+        color: var(--tp-common-white);
+        line-height: 1;
+        font-family: var(--tp-ff-dmsans);
+        & a{
+            background-repeat: no-repeat;
+            background-size: 0% 2px, 0 2px;
+            background-position: 100% 100%, 0 100%;
+            transition: background-size 0.4s linear;
+            background-image: linear-gradient(#fff, #fff), linear-gradient(#fff, #fff);
+        }
+        &:hover{
+            & a{
+                background-size: 0% 2px, 100% 2px;
+            }
+        }
+    }
+    &-item{
+        position: relative;
+        height: 100%;
+        &:hover{
+            &::after{
+                opacity: 1;
+                visibility: visible;
+            }
+            & .tp-project-3-img{
+                & img{
+                    mix-blend-mode: multiply;
+                    transform: scale(1.2) rotate(-2deg);
+                }
+            }
+            & .tp-project-3-content-wrap{
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+        &::after{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            content: '';
+            opacity: 0;
+            visibility: hidden;
+            transition: .3s;
+            background-color: rgba(230, 120, 80, 0.9);
+        }
+    }
+}
+
+.project-details{
+    &-customize {
+        & .evn-avata-content-wrap{
+            margin: 0px 40px;
+            background: #FFF;
+            padding: 30px 40px;
+            margin-top: -47px;
+            @media #{$xs}{
+                margin: 0;
+            }
+        }
+        & .evn-list-box ul {
+            margin-right: 0;
+            margin-bottom: 0;
+            margin-left: 20px;
+            @media #{$md,$xs}{
+                margin-left: 0;
+            }
+        }
+        & .evn-related-info{
+            & span{
+                font-size: 18px;
+                color: #727272;
+                & b{
+                    color: var(--tp-theme-2);
+                    margin-right: 5px;
+                }
+            }
+        }
+        & .evn-thumb::after {
+            display: none;
+        }
+    }
+    &-sm-thumb{
+        @media #{$md,$xs}{
+            margin-bottom: 50px;
+        }
+        & img{
+            width: 100%;
+        }
+    }
+}
+
+  
