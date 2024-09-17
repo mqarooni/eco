@@ -29,41 +29,7 @@
                     </div>
                 </div>
 
-                <!-- useful links -->
-                <div class="col-xl-3 col-lg-6 col-md-6 mb-50 wow tpfadeUp d-flex flex-column align-items-center"
-                    data-wow-duration=".9s" data-wow-delay=".5s">
-                    <div class="tp-footer-widget footer-col-2 text-center">
-                        <h4 class="tp-footer-widget-title">{{ __('messages.useful_links') }}</h4>
-                        <div class="tp-footer-widget-menu">
-                            <ul style="list-style: none; padding: 0;">
-                                @if(!empty($footer->useful_links))
-                                @php
-                                $usefulLinks = is_string($footer->useful_links) ? json_decode($footer->useful_links,
-                                true) : $footer->useful_links;
-                                @endphp
-                                @foreach($usefulLinks as $title)
-                                <li><a href="{{ route($title) }}">{{ __('messages.' . $title) }}</a></li>
-                                @endforeach
-                                @else
-                                <li>{{ __('messages.no_links_available') }}</li>
-                                @endif
-
-                                <!-- Custom Pages with 'show_in_footer_useful_links' -->
-                                @if(!empty($customPagesInFooter))
-                                @foreach($customPagesInFooter as $page)
-                                @if($page->show_in_footer_useful_links)
-                                <li>
-                                    <a href="{{ route('custom.page.show', $page->slug) }}">
-                                        {{ app()->getLocale() === 'ar' ? $page->page_name_ar : $page->page_name_en }}
-                                    </a>
-                                </li>
-                                @endif
-                                @endforeach
-                                @endif
-                            </ul>
-                        </div>
-                    </div>
-                </div>
+       
 
                 <!-- Social media -->
                 <div class="col-xl-3 col-lg-6 col-md-6 mb-50 wow tpfadeUp d-flex flex-column align-items-center"

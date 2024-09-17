@@ -14,7 +14,6 @@ Route::group([
     $router->get('/', 'HomeController@index')->name('home');
     $router->resource('brandings', BrandingController::class);
     $router->resource('landings', LandingController::class);
-    $router->resource('teams', TeamController::class);
     $router->resource('about-committees', AboutCommitteeControllers::class);
     $router->resource('footers', FooterController::class);
     $router->resource('popupsandcookies', popupsandcookiesController::class);
