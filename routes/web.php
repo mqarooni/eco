@@ -10,7 +10,6 @@ use App\Http\Controllers\FestivalListController;
 use App\Models\Branding;
 use App\Models\Festivals;
 use App\Http\Controllers\DevelopmentGoalsController;
-use App\Http\Controllers\MeetingsController;
 
 
 // Set the default route to the home page without language prefix
@@ -44,8 +43,5 @@ Route::get('/festivals/{slug}', [FestivalsController::class, 'show'])->name('fes
 Route::get('/about', [AboutController::class, 'index'])->name('about');
 Route::get('/aboutCommittee', [AboutCommitteeController::class, 'index'])->name('aboutCommittee');
 Route::get('/development-goals', [DevelopmentGoalsController::class, 'index'])->name('development-goals');
-Route::get('/meetings', [MeetingsController::class, 'index'])->name('meetings');
-Route::get('/meetings/{slug}', [MeetingsController::class, 'show'])->name('meetings.details');
 Route::get('/festivals', [FestivalListController::class, 'index'])->name('festivals.list');
-Route::get('/meetings', [MeetingsController::class, 'index'])->name('meetings');
 
