@@ -3,13 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DynamicPageController;
 use App\Http\Controllers\AboutController;
-use App\Http\Controllers\AboutCommitteeController;
 use App\Admin\Controllers\CustomPageController;
 use App\Http\Controllers\FestivalsController;
 use App\Http\Controllers\FestivalListController;
 use App\Models\Branding;
 use App\Models\Festivals;
-use App\Http\Controllers\DevelopmentGoalsController;
 
 
 // Set the default route to the home page without language prefix
@@ -41,7 +39,5 @@ Route::get('/festivals/{slug}', [FestivalsController::class, 'show'])->name('fes
 
 // Other website Pages
 Route::get('/about', [AboutController::class, 'index'])->name('about');
-Route::get('/aboutCommittee', [AboutCommitteeController::class, 'index'])->name('aboutCommittee');
-Route::get('/development-goals', [DevelopmentGoalsController::class, 'index'])->name('development-goals');
 Route::get('/festivals', [FestivalListController::class, 'index'])->name('festivals.list');
 
