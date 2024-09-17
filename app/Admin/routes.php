@@ -22,7 +22,6 @@ Route::group([
     $router->resource('custom-pages', CustomPageController::class);
     $router->resource('governancestandards', GovernancestandardsController::class);
     $router->resource('festivals', FestivalsController::class);
-    $router->resource('meetings', MeetingsController::class);
 
 
 
